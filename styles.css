@@ -1,0 +1,247 @@
+/* Enhanced CSS with cybersecurity theme and animations */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0a0a23 0%, #1a1a4d 100%);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 35, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.logo-text {
+    font-family: 'Alex Brush', cursive;
+    font-size: 2rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    padding-left: 2rem;
+}
+
+.tabs {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid #00ffff;
+    box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+.tab:hover {
+    color: #00ffff;
+    transform: translateY(-2px);
+}
+
+.glider {
+    background: linear-gradient(45deg, #00ffff, #00ccff);
+    box-shadow: 0 0 15px #00ffff;
+}
+
+/* Section Animation */
+.section {
+    padding: 4rem 2rem;
+    margin: 2rem auto;
+    max-width: 1400px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Intro Section */
+.name-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile-img {
+    width: 500px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid #00ffff;
+    white-space: nowrap;
+    animation: typing 4s steps(40) infinite,
+               blink 0.75s step-end infinite;
+}
+
+.glitch {
+    font-size: 5rem;
+    position: relative;
+    animation: glitch 2s linear infinite;
+}
+
+.glitch:before,
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch:before {
+    color: #f0f;
+    animation: glitch-top 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch:after {
+    color: #0ff;
+    animation: glitch-bottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+.name-text span {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.cyber-btn {
+    padding: 1rem 3rem;
+    background: transparent;
+    border: 2px solid #00ffff;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cyber-btn:hover {
+    background: #00ffff;
+    color: #0a0a23;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+/* Skills Section */
+.skills {
+    background: rgba(25, 22, 80, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+.skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.skill-level {
+    background: linear-gradient(90deg, #00ffff, #00ccff);
+    animation: fillBar 1.5s ease forwards;
+}
+
+/* Projects & Experience */
+.cyber-card {
+    background: rgba(35, 45, 120, 0.8);
+    border: 1px solid #00ffff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.cyber-card:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(0, 255, 255, 0.2),
+        transparent
+    );
+    animation: scan 4s linear infinite;
+}
+
+/* Animations */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+@keyframes glitch {
+    2%, 64% { transform: translate(2px, 0) skew(0deg); }
+    4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+    62% { transform: translate(0, 0) skew(5deg); }
+}
+
+@keyframes glitch-top {
+    2%, 64% { transform: translate(2px, -2px); }
+    4%, 60% { transform: translate(-2px, 2px); }
+    62% { transform: translate(13px, -1px) skew(-13deg); }
+}
+
+@keyframes glitch-bottom {
+    2%, 64% { transform: translate(-2px, 0); }
+    4%, 60% { transform: translate(-2px, 0); }
+    62% { transform: translate(-22px, 5px) skew(21deg); }
+}
+
+@keyframes fillBar {
+    from { width: 0 }
+    to { width: inherit }
+}
+
+@keyframes scan {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Responsive adjustments remain similar to your original code */
