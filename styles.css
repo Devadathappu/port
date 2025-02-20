@@ -78,6 +78,14 @@ body {
     transform: translateY(0);
 }
 
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
 /* Intro Section */
 .name-container {
     display: flex;
@@ -149,6 +157,7 @@ body {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 .cyber-btn:hover {
@@ -165,24 +174,58 @@ body {
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    padding: 1rem;
+}
+
+.skill-name {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
 .skill-bar {
     background: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 4px;
     overflow: hidden;
 }
 
 .skill-level {
+    height: 100%;
     background: linear-gradient(90deg, #00ffff, #00ccff);
     animation: fillBar 1.5s ease forwards;
 }
 
+.skill-percentage {
+    color: #00ffff;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
 /* Projects & Experience */
+.projects-container, .experience-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
 .cyber-card {
     background: rgba(35, 45, 120, 0.8);
     border: 1px solid #00ffff;
     border-radius: 10px;
+    padding: 1.5rem;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .cyber-card:hover {
@@ -204,6 +247,125 @@ body {
         transparent
     );
     animation: scan 4s linear infinite;
+}
+
+.cyber-card h4 {
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+}
+
+.cyber-card p {
+    font-size: 0.9rem;
+}
+
+/* Education Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #00ffff;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: #00ffff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.timeline-content {
+    width: 45%;
+    padding: 1rem;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 55%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 55%;
+    text-align: right;
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #00ffff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+.footer-container {
+    background: rgba(10, 10, 35, 0.9);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-icons ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-icons a {
+    color: #00ffff;
+    transition: all 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.copyright p {
+    margin: 1rem 0 0;
+    color: #00ffff;
 }
 
 /* Animations */
@@ -244,4 +406,41 @@ body {
     100% { transform: translateX(100%) rotate(45deg); }
 }
 
-/* Responsive adjustments remain similar to your original code */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .name-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 300px;
+    }
+
+    .glitch {
+        font-size: 3rem;
+    }
+
+    .skills-grid, .projects-container, .experience-container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-content {
+        width: 80%;
+        margin: 1rem 0 0 40px !important;
+        text-align: left;
+    }
+
+    .timeline-icon {
+        left: 20px;
+    }
+}
