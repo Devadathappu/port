@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devadath A - Cybersecurity Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Matrix Background -->
+    <canvas id="matrix-bg"></canvas>
+
+    <nav class="navbar">
+        <p class="logo-text">Devadath A</p>
+        <div class="tabs">
+            <input type="radio" id="radio-1" name="tabs" onclick="window.location.href='#intro'" checked>
+            <label for="radio-1" class="tab">Home</label>
+            <input type="radio" id="radio-2" name="tabs" onclick="window.location.href='#education'">
+            <label for="radio-2" class="tab">Education</label>
+            <input type="radio" id="radio-3" name="tabs" onclick="window.location.href='#experience'">
+            <label for="radio-3" class="tab">Experience</label>
+            <input type="radio" id="radio-4" name="tabs" onclick="window.location.href='#projects'">
+            <label for="radio-4" class="tab">Projects</label>
+            <span class="glider"></span>
+        </div>
+    </nav>
+
+    <!-- Rest of your HTML remains the same, just adding some classes for animation -->
+    <div id="intro" class="section animate-section">
+        <div id="name" class="name-container">
+            <img src="mypic.png" alt="me" class="profile-img">
+            <div class="name-text">
+                <h5 class="typewriter">CYBERSECURITY RESEARCHER AND ENTHUSIAST</h5>
+                <h3 class="glitch" data-text="Devadath">Devadath<span>A</span></h3>
+                <p class="fade-in">A dedicated cybersecurity professional currently preparing for the CEH exam. Bringing strong skills in cybersecurity fundamentals with a solid foundation from the Google Cybersecurity Professional Certificate program. Passionate about technology and enjoy exploring new tools and techniques in the cybersecurity field.</p>
+                <button class="cyber-btn" onclick="window.location.href='#contacts'">Contact</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of your HTML sections with added animation classes -->
+    <div class="skills section animate-section">
+        <!-- Skills content remains same -->
+    </div>
+
+    <div id="projects" class="section animate-section">
+        <!-- Projects content remains same, adding cyber-card class to .project -->
+        <div class="projects-container">
+            <div class="project cyber-card">
+                <!-- ... -->
+            </div>
+            <!-- Repeat for other projects -->
+        </div>
+    </div>
+
+    <div id="experience" class="section animate-section">
+        <!-- Experience content remains same, adding cyber-card class to .experience -->
+    </div>
+
+    <div id="education" class="section animate-section">
+        <!-- Education content remains same -->
+    </div>
+
+    <div id="contacts" class="section animate-section">
+        <!-- Contact content remains same -->
+    </div>
+
+    <footer class="animate-section">
+        <!-- Footer content remains same -->
+    </footer>
+
+    <script>
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const letters = '01HACKDEFENDPROTECT';
+        const fontSize = 16;
+        const columns = canvas.width/fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#0F0';
+            ctx.font = fontSize + 'px Orbitron';
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random()*letters.length)];
+                ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+                
+                if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
+                    drops[i] = 0;
+                
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 33);
+
+        // Scroll Animation Trigger
+        const sections = document.querySelectorAll('.animate-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
