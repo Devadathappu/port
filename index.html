@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Animated Matrix Background -->
     <canvas id="matrix-bg"></canvas>
 
     <nav class="navbar">
@@ -40,47 +39,87 @@
     </div>
 
     <div class="skills section animate-section">
-        <h4 class="section-title">Skills</h4>
+        <h3 class="section-title">Skills Matrix</h3>
         <div class="skills-grid">
-            <div class="skill-item">
-                <div class="skill-name">HTML</div>
-                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
-                <div class="skill-percentage">80%</div>
+            <div class="skill-card">
+                <h4>HTML</h4>
+                <div class="skill-circle" data-percent="80">
+                    <svg class="circle-svg">
+                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
+                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 80;"></circle>
+                    </svg>
+                    <span class="skill-percent">80%</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-name">Python</div>
-                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
-                <div class="skill-percentage">80%</div>
+            <div class="skill-card">
+                <h4>Python</h4>
+                <div class="skill-circle" data-percent="80">
+                    <svg class="circle-svg">
+                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
+                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 80;"></circle>
+                    </svg>
+                    <span class="skill-percent">80%</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-name">Java</div>
-                <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
-                <div class="skill-percentage">75%</div>
+            <div class="skill-card">
+                <h4>Java</h4>
+                <div class="skill-circle" data-percent="75">
+                    <svg class="circle-svg">
+                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
+                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 75;"></circle>
+                    </svg>
+                    <span class="skill-percent">75%</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-name">CSS</div>
-                <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
-                <div class="skill-percentage">70%</div>
+            <div class="skill-card">
+                <h4>CSS</h4>
+                <div class="skill-circle" data-percent="70">
+                    <svg class="circle-svg">
+                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
+                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 70;"></circle>
+                    </svg>
+                    <span class="skill-percent">70%</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-name">JavaScript</div>
-                <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
-                <div class="skill-percentage">50%</div>
+            <div class="skill-card">
+                <h4>JavaScript</h4>
+                <div class="skill-circle" data-percent="50">
+                    <svg class="circle-svg">
+                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
+                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 50;"></circle>
+                    </svg>
+                    <span class="skill-percent">50%</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-name">Nmap</div>
-                <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
-                <div class="skill-percentage">70%</div>
+            <div class="skill-card">
+                <h4>Nmap</h4>
+                <div class="skill-circle" data-percent="70">
+                    <svg class="circle-svg">
+                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
+                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 70;"></circle>
+                    </svg>
+                    <span class="skill-percent">70%</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-name">SIEM</div>
-                <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
-                <div class="skill-percentage">70%</div>
+            <div class="skill-card">
+                <h4>SIEM</h4>
+                <div class="skill-circle" data-percent="70">
+                    <svg class="circle-svg">
+                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
+                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 70;"></circle>
+                    </svg>
+                    <span class="skill-percent">70%</span>
+                </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-name">Penetration Testing</div>
-                <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
-                <div class="skill-percentage">60%</div>
+            <div class="skill-card">
+                <h4>Penetration Testing</h4>
+                <div class="skill-circle" data-percent="60">
+                    <svg class="circle-svg">
+                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
+                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 60;"></circle>
+                    </svg>
+                    <span class="skill-percent">60%</span>
+                </div>
             </div>
         </div>
     </div>
@@ -112,78 +151,93 @@
     </div>
 
     <div id="experience" class="section animate-section">
-        <h3 class="section-title">Achievements and Certifications</h3>
+        <h3 class="section-title">Achievements & Certifications</h3>
         <div class="experience-container">
-            <div class="experience cyber-card">
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-trophy"></i></div>
                 <h4>NASA - Hall of Fame</h4>
-                <p>Recognized for outstanding cybersecurity contributions.</p>
+                <p>Recognized for outstanding cybersecurity contributions</p>
             </div>
-            <div class="experience cyber-card">
-                <h4>CEH</h4>
-                <p>Certified Ethical Hacker - In Progress</p>
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
+                <h4>CEH (In Progress)</h4>
+                <p>Certified Ethical Hacker certification</p>
             </div>
-            <div class="experience cyber-card">
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
                 <h4>Google Cybersecurity Specialist</h4>
-                <p>Completed professional certificate program.</p>
+                <p>Professional certificate program completed</p>
             </div>
-            <div class="experience cyber-card">
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
                 <h4>ASA</h4>
-                <p>Advanced SOC Analyst certification.</p>
+                <p>Advanced SOC Analyst certification</p>
             </div>
-            <div class="experience cyber-card">
+            <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
                 <h4>CST</h4>
-                <p>Certified Security Tester credential.</p>
+                <p>Certified Security Tester credential</p>
             </div>
         </div>
     </div>
 
     <div id="education" class="section animate-section">
-        <h3 class="section-title">Education</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content cyber-card">
-                    <h3>High School (X)</h3>
+        <h3 class="section-title">Education Journey</h3>
+        <div class="education-timeline">
+            <div class="education-card">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <h4>High School (X)</h4>
                     <p>Amrita Vidyalayam Kanhangad, 2018</p>
-                    <p>GPA: 8.3</p>
+                    <p class="highlight">GPA: 8.3</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content cyber-card">
-                    <h3>Intermediary (XII)</h3>
+            <div class="education-card">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <h4>Intermediary (XII)</h4>
                     <p>GHSS Madikkai, 2020</p>
-                    <p>Percentage: 80.33%</p>
+                    <p class="highlight">Percentage: 80.33%</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content cyber-card">
-                    <h3>Bachelor of Technology in Computer Science</h3>
-                    <p>APJ Abdul Kalam Technological University, 2020-2024</p>
+            <div class="education-card">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <h4>B.Tech in Computer Science</h4>
+                    <p>APJ Abdul Kalam Technological University</p>
+                    <p class="highlight">2020-2024</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-icon"></div>
-                <div class="timeline-content cyber-card">
-                    <h3>CEH + CST + ASA</h3>
+            <div class="education-card">
+                <div class="education-dot"></div>
+                <div class="education-content">
+                    <h4>CEH + CST + ASA</h4>
                     <p>EC Council Certifications</p>
+                    <p class="highlight">Professional Training</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="contacts" class="section animate-section">
-        <h4 class="section-title">Contact</h4>
-        <form class="contact-form cyber-card" action="https://formspree.io/f/xayrrwae" method="POST">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit" class="cyber-btn">Submit</button>
-        </form>
+        <h3 class="section-title">Secure Contact</h3>
+        <div class="contact-container">
+            <form class="contact-form" action="https://formspree.io/f/xayrrwae" method="POST">
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Enter your message..."></textarea>
+                </div>
+                <button type="submit" class="cyber-btn">Transmit</button>
+            </form>
+        </div>
     </div>
 
     <footer class="animate-section">
@@ -203,10 +257,8 @@
     </footer>
 
     <script>
-        // Matrix Rain Effect
         const canvas = document.getElementById('matrix-bg');
         const ctx = canvas.getContext('2d');
-        
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
@@ -218,24 +270,18 @@
         function draw() {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
             ctx.fillStyle = '#0F0';
             ctx.font = fontSize + 'px Orbitron';
-            
             for(let i = 0; i < drops.length; i++) {
                 const text = letters[Math.floor(Math.random()*letters.length)];
                 ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-                
                 if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
                     drops[i] = 0;
-                
                 drops[i]++;
             }
         }
-
         setInterval(draw, 33);
 
-        // Scroll Animation Trigger
         const sections = document.querySelectorAll('.animate-section');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -244,8 +290,14 @@
                 }
             });
         }, { threshold: 0.1 });
-
         sections.forEach(section => observer.observe(section));
+
+        // Skill Circle Animation
+        document.querySelectorAll('.skill-circle').forEach(circle => {
+            const percent = circle.getAttribute('data-percent');
+            const progress = circle.querySelector('.circle-progress');
+            progress.style.strokeDasharray = `${(percent / 100) * 377} 377`;
+        });
     </script>
 </body>
 </html>
