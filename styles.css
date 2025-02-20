@@ -1,4 +1,3 @@
-/* Enhanced CSS with cybersecurity theme and animations */
 body {
     margin: 0;
     padding: 0;
@@ -63,7 +62,6 @@ body {
     box-shadow: 0 0 15px #00ffff;
 }
 
-/* Section Animation */
 .section {
     padding: 4rem 2rem;
     margin: 2rem auto;
@@ -84,6 +82,19 @@ body {
     margin-bottom: 2rem;
     color: #00ffff;
     text-shadow: 0 0 10px #00ffff;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    background: #00ffff;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #00ffff;
 }
 
 /* Intro Section */
@@ -167,50 +178,72 @@ body {
 }
 
 /* Skills Section */
-.skills {
-    background: rgba(25, 22, 80, 0.8);
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
-}
-
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.skill-item {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
     padding: 1rem;
 }
 
-.skill-name {
-    color: #fff;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.skill-bar {
-    background: rgba(255, 255, 255, 0.1);
-    height: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.skill-level {
-    height: 100%;
-    background: linear-gradient(90deg, #00ffff, #00ccff);
-    animation: fillBar 1.5s ease forwards;
-}
-
-.skill-percentage {
-    color: #00ffff;
+.skill-card {
     text-align: center;
-    margin-top: 0.5rem;
+    padding: 1rem;
+    background: rgba(35, 45, 120, 0.8);
+    border-radius: 15px;
+    border: 1px solid #00ffff;
+    transition: transform 0.3s ease;
 }
 
-/* Projects & Experience */
-.projects-container, .experience-container {
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.skill-card h4 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.skill-circle {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.circle-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 10;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: #00ffff;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 0 377;
+    animation: circleFill 2s ease forwards;
+}
+
+.skill-percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+/* Projects */
+.projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -258,84 +291,162 @@ body {
     font-size: 0.9rem;
 }
 
-/* Education Timeline */
-.timeline {
+/* Achievements & Certifications */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.achievement-card {
+    background: rgba(35, 45, 120, 0.8);
+    border: 1px solid #00ffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.achievement-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.achievement-card h4 {
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-card p {
+    font-size: 0.9rem;
+}
+
+/* Education */
+.education-timeline {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem 0;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background: #00ffff;
-    transform: translateX(-50%);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
+.education-card {
     display: flex;
     align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
-.timeline-icon {
-    position: absolute;
-    left: 50%;
+.education-dot {
     width: 20px;
     height: 20px;
     background: #00ffff;
     border-radius: 50%;
-    transform: translateX(-50%);
+    margin-right: 1rem;
     box-shadow: 0 0 10px #00ffff;
+    position: relative;
+    z-index: 1;
 }
 
-.timeline-content {
-    width: 45%;
+.education-timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 9px;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00ffff, transparent);
+}
+
+.education-content {
+    background: rgba(35, 45, 120, 0.8);
+    border: 1px solid #00ffff;
+    border-radius: 10px;
     padding: 1rem;
+    flex: 1;
+    transition: transform 0.3s ease;
 }
 
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: 55%;
+.education-card:hover .education-content {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-right: 55%;
-    text-align: right;
+.education-content h4 {
+    color: #00ffff;
+    margin-bottom: 0.5rem;
 }
 
-/* Contact Section */
-.contact-form {
+.highlight {
+    color: #00ffff;
+    font-weight: bold;
+}
+
+/* Contact */
+.contact-container {
     max-width: 600px;
     margin: 0 auto;
+    background: rgba(35, 45, 120, 0.8);
+    border: 1px solid #00ffff;
+    border-radius: 15px;
     padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
-.contact-form label {
-    display: block;
-    margin: 1rem 0 0.5rem;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-field {
+    position: relative;
+}
+
+.form-field label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: rgba(35, 45, 120, 0.8);
+    padding: 0 5px;
     color: #00ffff;
+    font-size: 0.9rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-field input,
+.form-field textarea {
     width: 100%;
-    padding: 0.8rem;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #00ffff;
     border-radius: 5px;
     color: #fff;
     font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
 }
 
-.contact-form textarea {
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.form-field textarea {
     height: 150px;
     resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* Footer */
@@ -396,9 +507,9 @@ body {
     62% { transform: translate(-22px, 5px) skew(21deg); }
 }
 
-@keyframes fillBar {
-    from { width: 0 }
-    to { width: inherit }
+@keyframes circleFill {
+    from { stroke-dasharray: 0 377; }
+    to { stroke-dasharray: var(--percent) 377; }
 }
 
 @keyframes scan {
@@ -425,22 +536,20 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
+    .education-card {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .timeline-content {
-        width: 80%;
-        margin: 1rem 0 0 40px !important;
-        text-align: left;
+    .education-dot {
+        margin-bottom: 1rem;
     }
 
-    .timeline-icon {
-        left: 20px;
+    .education-timeline:before {
+        left: 9px;
+    }
+
+    .education-content {
+        width: 100%;
     }
 }
