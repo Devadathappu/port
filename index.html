@@ -240,7 +240,7 @@
         </div>
     </div>
 
-    <footer class="animate-section">
+    <footer class="footer-section animate-section">
         <div class="footer-container">
             <div class="footer-icons">
                 <ul>
@@ -250,9 +250,9 @@
                     <li><a href="https://github.com/Devadathappu" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
                 </ul>
             </div>
-        </div>
-        <div class="copyright">
-            <p>2024 © by Devadath A</p>
+            <div class="copyright">
+                <p>2024 © by Devadath A</p>
+            </div>
         </div>
     </footer>
 
@@ -292,7 +292,6 @@
         }, { threshold: 0.1 });
         sections.forEach(section => observer.observe(section));
 
-        // Skill Circle Animation
         document.querySelectorAll('.skill-circle').forEach(circle => {
             const percent = circle.getAttribute('data-percent');
             const progress = circle.querySelector('.circle-progress');
