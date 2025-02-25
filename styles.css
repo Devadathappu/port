@@ -69,7 +69,13 @@
             color: var(--cyber-blue);
         }
         
-       
+       .navbar p {
+    margin: 0;
+    padding-left: 30px;
+    font-size: 25px;
+    font-family: 'Alex Brush', cursive;
+    color: white;
+}
       /* Replace the current glider positioning rules with these updated ones */
 .tabs {
     display: flex;
