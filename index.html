@@ -358,6 +358,48 @@
             // Start typing effect after a short delay
             setTimeout(typeWriter, 500);
         });
+        // Add this to your existing JavaScript code
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all radio inputs and the glider
+    const tabInputs = document.querySelectorAll('.tabs input');
+    const glider = document.querySelector('.glider');
+    
+    // Function to update glider position
+    function updateGliderPosition() {
+        // Find the checked input
+        const checkedInput = document.querySelector('.tabs input:checked');
+        if (!checkedInput) return;
+        
+        // Get the associated label (tab)
+        const activeTab = checkedInput.nextElementSibling;
+        
+        // Set the glider position and width based on the active tab
+        glider.style.width = `${activeTab.offsetWidth}px`;
+        glider.style.left = `${activeTab.offsetLeft}px`;
+    }
+    
+    // Update glider position when a tab is clicked
+    tabInputs.forEach(input => {
+        input.addEventListener('change', updateGliderPosition);
+    });
+    
+    // Update on page load and resize
+    window.addEventListener('resize', updateGliderPosition);
+    updateGliderPosition(); // Initial position
+    
+    // Update when window hash changes (since you're using hash navigation)
+    window.addEventListener('hashchange', function() {
+        // Find which tab corresponds to the current hash
+        const hash = window.location.hash;
+        tabInputs.forEach(input => {
+            const targetSection = input.getAttribute('onclick').match(/'#(.*?)'/)[1];
+            if (`#${targetSection}` === hash) {
+                input.checked = true;
+                updateGliderPosition();
+            }
+        });
+    });
+});
     </script>
 </body> 
 </html>
