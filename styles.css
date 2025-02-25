@@ -635,6 +635,15 @@
     margin-bottom: 1.5rem;
     color: white;
     transition: all 0.3s ease;
+    width: 100%; /* Make all inputs full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+    font-family: 'Roboto', sans-serif; /* Match font with inputs */
+    line-height: 1.5; /* Improve readability */
 }
         
         .contact-form input:focus,
