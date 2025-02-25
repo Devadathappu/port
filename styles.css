@@ -73,7 +73,7 @@
     margin: 0;
     padding-left: 30px;
     font-size: 25px;
-    font-family: 'Alex Brush', cursive;
+    font-family: 'Alex Brush', cursive !important;
     color: white;
 }
       /* Replace the current glider positioning rules with these updated ones */
