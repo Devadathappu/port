@@ -627,15 +627,16 @@
         }
         
         .contact-form input,
-        .contact-form textarea {
-            background-color: var(--netflix-black);
-            border: 1px solid var(--netflix-light-gray);
-            border-radius: 4px;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            color: white;
-            transition: all 0.3s ease;
-        }
+.contact-form textarea {
+    width: 100%; /* This will make all inputs take full width of the container */
+    background-color: var(--netflix-black);
+    border: 1px solid var(--netflix-light-gray);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
         
         .contact-form input:focus,
         .contact-form textarea:focus {
