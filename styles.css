@@ -69,63 +69,88 @@
             color: var(--cyber-blue);
         }
         
-        .tabs {
-            display: flex;
-            position: relative;
-        }
-        
-        .tabs input {
-            display: none;
-        }
-        
-        .tab {
-            padding: 0.8rem 1.5rem;
-            cursor: pointer;
-            margin: 0 0.3rem;
-            position: relative;
-            z-index: 2;
-            transition: all 0.3s ease;
-        }
-        
-        .tab:hover {
-            color: var(--cyber-blue);
-        }
-        
-        .tabs input:checked + .tab {
-            color: var(--netflix-black);
-        }
-        
-        .glider {
-            position: absolute;
-            height: 80%;
-            top: 10%;
-            width: 0;
-            background: linear-gradient(90deg, var(--cyber-blue), var(--netflix-red));
-            z-index: 1;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .tabs input:nth-of-type(1):checked ~ .glider {
-            left: 0;
-            width: 80px;
-        }
-        
-        .tabs input:nth-of-type(2):checked ~ .glider {
-            left: 85px;
-            width: 110px;
-        }
-        
-        .tabs input:nth-of-type(3):checked ~ .glider {
-            left: 200px;
-            width: 120px;
-        }
-        
-        .tabs input:nth-of-type(4):checked ~ .glider {
-            left: 325px;
-            width: 100px;
-        }
-        
+       
+      /* Replace the current glider positioning rules with these updated ones */
+.tabs {
+    display: flex;
+    position: relative;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tab {
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    margin: 0 0.3rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    color: var(--cyber-blue);
+}
+
+.tabs input:checked + .tab {
+    color: var(--netflix-black);
+}
+
+.glider {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    width: 0;
+    background: linear-gradient(90deg, var(--cyber-blue), var(--netflix-red));
+    z-index: 1;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Updated positioning rules for the glider */
+.tabs input:nth-of-type(1):checked ~ .glider {
+    left: 0.3rem; /* Start at the left margin of first tab */
+    width: 80px;
+}
+
+.tabs input:nth-of-type(2):checked ~ .glider {
+    left: 84px; /* Position based on first tab width (80px) + margins */
+    width: 110px;
+}
+
+.tabs input:nth-of-type(3):checked ~ .glider {
+    left: 198px; /* Position based on previous tabs width + margins */
+    width: 120px;
+}
+
+.tabs input:nth-of-type(4):checked ~ .glider {
+    left: 322px; /* Position based on previous tabs width + margins */
+    width: 100px;
+}
+
+/* Add a JavaScript function to make this responsive */
+@media (max-width: 768px) {
+    .tabs input:nth-of-type(1):checked ~ .glider {
+        left: calc(25% - 40px);
+        width: 80px;
+    }
+    
+    .tabs input:nth-of-type(2):checked ~ .glider {
+        left: calc(50% - 55px);
+        width: 110px;
+    }
+    
+    .tabs input:nth-of-type(3):checked ~ .glider {
+        left: calc(75% - 60px);
+        width: 120px;
+    }
+    
+    .tabs input:nth-of-type(4):checked ~ .glider {
+        left: calc(100% - 50px);
+        width: 100px;
+    }
+}
         /* Hero Section */
         #intro {
             min-height: 100vh;
