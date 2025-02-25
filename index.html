@@ -7,296 +7,361 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron|Alex+Brush&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <canvas id="matrix-bg"></canvas>
+</head> 
+<body> 
+    <!-- Matrix-like background -->
+    <div class="matrix-background" id="matrixBackground"></div>
 
-    <nav class="navbar">
-        <p class="logo-text">Devadath A</p>
-        <div class="tabs">
-            <input type="radio" id="radio-1" name="tabs" onclick="window.location.href='#intro'" checked>
-            <label for="radio-1" class="tab">Home</label>
-            <input type="radio" id="radio-2" name="tabs" onclick="window.location.href='#education'">
-            <label for="radio-2" class="tab">Education</label>
-            <input type="radio" id="radio-3" name="tabs" onclick="window.location.href='#experience'">
-            <label for="radio-3" class="tab">Experience</label>
-            <input type="radio" id="radio-4" name="tabs" onclick="window.location.href='#projects'">
-            <label for="radio-4" class="tab">Projects</label>
-            <span class="glider"></span>
-        </div>
-    </nav>
-
-    <div id="intro" class="section animate-section">
-        <div id="name" class="name-container">
-            <img src="mypic.png" alt="x" class="profile-img">
-            <div class="name-text">
-                <h5 class="typewriter">CYBERSECURITY RESEARCHER AND ENTHUSIAST</h5>
-                <h3 class="glitch" data-text="Devadath">Devadath<span>A</span></h3>
-                <p class="fade-in">A dedicated cybersecurity professional currently preparing for the CEH exam. Bringing strong skills in cybersecurity fundamentals with a solid foundation from the Google Cybersecurity Professional Certificate program. Passionate about technology and enjoy exploring new tools and techniques in the cybersecurity field.</p>
-                <button class="cyber-btn" onclick="window.location.href='#contacts'">Contact</button>
+    <nav class="navbar" id="navbar"> 
+        <div class="logo">Deva<span>Sec</span></div>
+        <div class="tabs"> 
+            <input type="radio" id="radio-1" name="tabs" onclick="window.location.href='#intro'" checked> 
+            <label for="radio-1" class="tab">Home</label> 
+            <input type="radio" id="radio-2" name="tabs" onclick="window.location.href='#education'"> 
+            <label for="radio-2" class="tab">Education</label> 
+            <input type="radio" id="radio-3" name="tabs" onclick="window.location.href='#experience'"> 
+            <label for="radio-3" class="tab">Certifications</label> 
+            <input type="radio" id="radio-4" name="tabs" onclick="window.location.href='#projects'"> 
+            <label for="radio-4" class="tab">Projects</label> 
+            <span class="glider"></span> 
+        </div> 
+    </nav> 
+    
+    <!-- Hero Section -->
+    <div id="intro"> 
+        <div id="name"> 
+            <img src="/api/placeholder/500/500" alt="Devadath A - Cybersecurity Professional"> 
+            <div class="name-text"> 
+                <h5>CYBERSECURITY RESEARCHER AND PROFESSIONAL</h5> 
+                <h3>Devadath<span>A</span></h3> 
+                <p>A dedicated cybersecurity professional currently preparing for the CEH exam. Bringing strong skills in cybersecurity 
+                    fundamentals with a solid foundation from the Google Cybersecurity Professional Certificate program. Passionate 
+                    about digital protection and exploring cutting-edge tools and techniques in the evolving cybersecurity landscape.
+                </p> 
+                <button onclick="window.location.href='#contacts'">Contact Me</button> 
+            </div> 
+        </div> 
+    </div> 
+    
+    <!-- Skills Section -->
+    <div class="skills"> 
+        <h4>Technical Arsenal</h4> 
+        <div class="skill-name">HTML</div> 
+        <div class="skill-bar"> 
+            <div class="skill-level" style="--width-value: 80%;"></div> 
+        </div> 
+        <div class="skill-percentage">80%</div> 
+        
+        <div class="skill-name">Python</div> 
+        <div class="skill-bar"> 
+            <div class="skill-level" style="--width-value: 80%;"></div> 
+        </div> 
+        <div class="skill-percentage">80%</div> 
+        
+        <div class="skill-name">Java</div> 
+        <div class="skill-bar"> 
+            <div class="skill-level" style="--width-value: 75%;"></div> 
+        </div> 
+        <div class="skill-percentage">75%</div> 
+        
+        <div class="skill-name">CSS</div> 
+        <div class="skill-bar"> 
+            <div class="skill-level" style="--width-value: 70%;"></div> 
+        </div> 
+        <div class="skill-percentage">70%</div> 
+        
+        <div class="skill-name">JavaScript</div> 
+        <div class="skill-bar"> 
+            <div class="skill-level" style="--width-value: 50%;"></div> 
+        </div> 
+        <div class="skill-percentage">50%</div> 
+        
+        <div class="skill-name">Nmap</div> 
+        <div class="skill-bar"> 
+            <div class="skill-level" style="--width-value: 70%;"></div> 
+        </div> 
+        <div class="skill-percentage">70%</div> 
+        
+        <div class="skill-name">SIEM</div> 
+        <div class="skill-bar"> 
+            <div class="skill-level" style="--width-value: 70%;"></div> 
+        </div> 
+        <div class="skill-percentage">70%</div> 
+        
+        <div class="skill-name">Penetration Testing</div> 
+        <div class="skill-bar"> 
+            <div class="skill-level" style="--width-value: 60%;"></div> 
+        </div> 
+        <div class="skill-percentage">60%</div> 
+    </div> 
+    
+    <!-- Projects Section -->
+    <div id="projects"> 
+        <h3>Security Projects</h3> 
+        <div class="projects-container"> 
+            <div class="project"> 
+                <h4>Advanced Keylogger</h4>
+                <a href="https://github.com/Devadathappu/portfolio" target="_blank"><i class="fab fa-github"></i></a> 
+            </div> 
+            <div class="project"> 
+                <h4>Virtual Security Lab</h4>
+                <a href="https://github.com/Devadathappu/virtual" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-        </div>
-    </div>
-
-    <div class="skills section animate-section">
-        <h3 class="section-title">Skills Matrix</h3>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h4>HTML</h4>
-                <div class="skill-circle" data-percent="80">
-                    <svg class="circle-svg">
-                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
-                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 80;"></circle>
-                    </svg>
-                    <span class="skill-percent">80%</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h4>Python</h4>
-                <div class="skill-circle" data-percent="80">
-                    <svg class="circle-svg">
-                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
-                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 80;"></circle>
-                    </svg>
-                    <span class="skill-percent">80%</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h4>Java</h4>
-                <div class="skill-circle" data-percent="75">
-                    <svg class="circle-svg">
-                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
-                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 75;"></circle>
-                    </svg>
-                    <span class="skill-percent">75%</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h4>CSS</h4>
-                <div class="skill-circle" data-percent="70">
-                    <svg class="circle-svg">
-                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
-                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 70;"></circle>
-                    </svg>
-                    <span class="skill-percent">70%</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h4>JavaScript</h4>
-                <div class="skill-circle" data-percent="50">
-                    <svg class="circle-svg">
-                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
-                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 50;"></circle>
-                    </svg>
-                    <span class="skill-percent">50%</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h4>Nmap</h4>
-                <div class="skill-circle" data-percent="70">
-                    <svg class="circle-svg">
-                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
-                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 70;"></circle>
-                    </svg>
-                    <span class="skill-percent">70%</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h4>SIEM</h4>
-                <div class="skill-circle" data-percent="70">
-                    <svg class="circle-svg">
-                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
-                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 70;"></circle>
-                    </svg>
-                    <span class="skill-percent">70%</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h4>Penetration Testing</h4>
-                <div class="skill-circle" data-percent="60">
-                    <svg class="circle-svg">
-                        <circle cx="70" cy="70" r="60" class="circle-bg"></circle>
-                        <circle cx="70" cy="70" r="60" class="circle-progress" style="--percent: 60;"></circle>
-                    </svg>
-                    <span class="skill-percent">60%</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="projects" class="section animate-section">
-        <h3 class="section-title">Projects</h3>
-        <div class="projects-container">
-            <div class="project cyber-card">
-                <h4>Key Logger</h4>
-                <p>A security tool to monitor keystrokes for analysis and testing.</p>
-                <a href="https://github.com/Devadathappu/portfolio" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-            </div>
-            <div class="project cyber-card">
-                <h4>Virtual Lab</h4>
-                <p>Simulated environment for cybersecurity training and testing.</p>
-                <a href="https://github.com/Devadathappu/portfolio" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-            </div>
-            <div class="project cyber-card">
-                <h4>Firewall</h4>
-                <p>Custom network security system to monitor and control traffic.</p>
-                <a href="https://github.com/Devadathappu/portfolio" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-            </div>
-            <div class="project cyber-card">
-                <h4>Pet Tracker and Healthcare Management System</h4>
-                <p>IoT-based secure tracking and health monitoring solution.</p>
-                <a href="https://github.com/Devadathappu/portfolio" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <div id="experience" class="section animate-section">
-        <h3 class="section-title">Achievements & Certifications</h3>
-        <div class="experience-container">
-            <div class="achievement-card">
-                <div class="achievement-icon"><i class="fa fa-trophy"></i></div>
+            <div>
+                <h4>Virtual Security Lab</h4>
+                <a href="https://github.com/Devadathappu/portfolio" target="_blank"><i class="fab fa-github"></i></a> 
+            </div> 
+            <div class="project"> 
+                <h4>Firewall Implementation</h4>
+                <a href="https://github.com/Devadathappu/portfolio" target="_blank"><i class="fab fa-github"></i></a> 
+            </div> 
+            <div class="project"> 
+                <h4>Pet Tracker Security System</h4>
+                <a href="https://github.com/Devadathappu/portfolio" target="_blank"><i class="fab fa-github"></i></a> 
+            </div> 
+        </div> 
+    </div> 
+    
+    <!-- Experience/Certifications Section -->
+    <div id="experience"> 
+        <h3>Achievements and Certifications</h3> 
+        <div class="experience-container"> 
+            <div class="experience"> 
                 <h4>NASA - Hall of Fame</h4>
-                <p>Recognized for outstanding cybersecurity contributions</p>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
-                <h4>CEH (In Progress)</h4>
-                <p>Certified Ethical Hacker certification</p>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
+                <p>Recognized for identifying security vulnerabilities</p>
+            </div> 
+            <div class="experience"> 
+                <h4>CEH</h4> 
+                <p>Certified Ethical Hacker</p> 
+            </div> 
+            <div class="experience"> 
                 <h4>Google Cybersecurity Specialist</h4>
-                <p>Professional certificate program completed</p>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
-                <h4>ASA</h4>
-                <p>Advanced SOC Analyst certification</p>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
-                <h4>CST</h4>
-                <p>Certified Security Tester credential</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="education" class="section animate-section">
-        <h3 class="section-title">Education Journey</h3>
-        <div class="education-timeline">
-            <div class="education-card">
-                <div class="education-dot"></div>
-                <div class="education-content">
-                    <h4>High School (X)</h4>
-                    <p>Amrita Vidyalayam Kanhangad, 2018</p>
-                    <p class="highlight">GPA: 8.3</p>
-                </div>
-            </div>
-            <div class="education-card">
-                <div class="education-dot"></div>
-                <div class="education-content">
-                    <h4>Intermediary (XII)</h4>
-                    <p>GHSS Madikkai, 2020</p>
-                    <p class="highlight">Percentage: 80.33%</p>
-                </div>
-            </div>
-            <div class="education-card">
-                <div class="education-dot"></div>
-                <div class="education-content">
-                    <h4>B.Tech in Computer Science</h4>
-                    <p>APJ Abdul Kalam Technological University</p>
-                    <p class="highlight">2020-2024</p>
-                </div>
-            </div>
-            <div class="education-card">
-                <div class="education-dot"></div>
-                <div class="education-content">
-                    <h4>CEH + CST + ASA</h4>
-                    <p>EC Council Certifications</p>
-                    <p class="highlight">Professional Training</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="contacts" class="section animate-section">
-        <h3 class="section-title">Secure Contact</h3>
-        <div class="contact-container">
-            <form class="contact-form" action="https://formspree.io/f/xayrrwae" method="POST">
-                <div class="form-field">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-                <div class="form-field">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
-                </div>
-                <div class="form-field">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required placeholder="Enter your message..."></textarea>
-                </div>
-                <button type="submit" class="cyber-btn">Transmit</button>
-            </form>
-        </div>
-    </div>
-
-    <footer class="footer-section animate-section">
-        <div class="footer-container">
-            <div class="footer-icons">
-                <ul>
-                    <li><a href="mailto:devadathnair4397@gmail.com"><i class="fa fa-envelope fa-2x"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/devadath-a-97a304245" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
-                    <li><a href="https://www.instagram.com/_devadath_a_/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
-                    <li><a href="https://github.com/Devadathappu" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <p>2024 © by Devadath A</p>
-            </div>
-        </div>
-    </footer>
-
+                <p>Professional certification in cybersecurity fundamentals</p>
+            </div> 
+            <div class="experience"> 
+                <h4>ASA</h4> 
+                <p>Advanced SOC Analyst</p> 
+            </div> 
+            <div class="experience"> 
+                <h4>CST</h4> 
+                <p>Certified Security Tester</p> 
+            </div> 
+        </div> 
+    </div> 
+    
+    <!-- Education Section -->
+    <div id="education"> 
+        <h3>Education Timeline</h3> 
+        <div class="timeline"> 
+            <div class="timeline-item"> 
+                <div class="timeline-icon"></div> 
+                <div class="timeline-content"> 
+                    <h3>High School (X)</h3> 
+                    <p>Amrita Vidyalayam Kanhangad, 2018</p> 
+                    <p>GPA: 8.3</p> 
+                </div> 
+            </div> 
+            <div class="timeline-item"> 
+                <div class="timeline-icon"></div> 
+                <div class="timeline-content"> 
+                    <h3>Intermediary (XII)</h3> 
+                    <p>GHSS Madikkai, 2020</p> 
+                    <p>Percentage: 80.33%</p>
+                </div> 
+            </div> 
+            <div class="timeline-item"> 
+                <div class="timeline-icon"></div> 
+                <div class="timeline-content"> 
+                    <h3>Bachelor of Technology in Computer Science</h3> 
+                    <p>APJ Abdul Kalam Technological University, 2020-2024</p> 
+                </div> 
+            </div> 
+            <div class="timeline-item"> 
+                <div class="timeline-icon"></div> 
+                <div class="timeline-content"> 
+                    <h3>Professional Certifications</h3> 
+                    <p>CEH + CST + ASA (EC COUNCIL)</p> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    
+    <!-- Contact Section -->
+    <div id="contacts"> 
+        <h4>Secure Communication</h4> 
+        <form class="contact-form" action="https://formspree.io/f/xayrrwae" method="POST"> 
+            <label for="email">Email</label> 
+            <input type="email" id="email" name="email" required> 
+            <label for="name">Name</label> 
+            <input type="text" id="name" name="name" required> 
+            <label for="message">Message</label> 
+            <textarea id="message" name="message" required></textarea> 
+            <button type="submit">Transmit Message</button> 
+        </form> 
+    </div> 
+    
+    <!-- Footer -->
+    <footer> 
+        <div class="footer-container"> 
+            <div class="footer-icons"> 
+                <ul> 
+                    <li><a href="mailto:devadathnair4397@gmail.com"><i class="fas fa-envelope"></i></a></li> 
+                    <li><a href="https://www.linkedin.com/in/devadath-a-97a304245?" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+                    <li><a href="https://www.instagram.com/_devadath_a_/" target="_blank"><i class="fab fa-instagram"></i></a></li> 
+                    <li><a href="https://github.com/Devadathappu" target="_blank"><i class="fab fa-github"></i></a></li> 
+                </ul> 
+            </div> 
+        </div> 
+        <div class="copyright"> 
+            <p>2024 &copy; Protected by Devadath A</p> 
+        </div> 
+    </footer> 
+    
+    <!-- JavaScript for animations and interactions -->
     <script>
-        const canvas = document.getElementById('matrix-bg');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const letters = '01HACKDEFENDPROTECT';
-        const fontSize = 16;
-        const columns = canvas.width/fontSize;
-        const drops = Array(Math.floor(columns)).fill(1);
-
-        function draw() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#0F0';
-            ctx.font = fontSize + 'px Orbitron';
-            for(let i = 0; i < drops.length; i++) {
-                const text = letters[Math.floor(Math.random()*letters.length)];
-                ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-                if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
-                    drops[i] = 0;
-                drops[i]++;
+        // Add Matrix-like background effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const matrixBackground = document.getElementById('matrixBackground');
+            
+            // Create binary elements
+            for (let i = 0; i < 30; i++) {
+                createBinaryStream();
             }
-        }
-        setInterval(draw, 33);
-
-        const sections = document.querySelectorAll('.animate-section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+            
+            function createBinaryStream() {
+                const binary = document.createElement('div');
+                binary.classList.add('binary');
+                
+                // Create random binary text
+                let binaryText = '';
+                const length = Math.floor(Math.random() * 100) + 50;
+                for (let i = 0; i < length; i++) {
+                    binaryText += Math.round(Math.random()) ? '1' : '0';
+                }
+                
+                binary.textContent = binaryText;
+                
+                // Random position and speed
+                const left = Math.random() * 100;
+                const duration = Math.random() * 15 + 10;
+                
+                binary.style.left = `${left}%`;
+                binary.style.animationDuration = `${duration}s`;
+                
+                matrixBackground.appendChild(binary);
+                
+                // Remove after animation completes
+                setTimeout(() => {
+                    binary.remove();
+                    createBinaryStream();
+                }, duration * 1000);
+            }
+            
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
                 }
             });
-        }, { threshold: 0.1 });
-        sections.forEach(section => observer.observe(section));
-
-        document.querySelectorAll('.skill-circle').forEach(circle => {
-            const percent = circle.getAttribute('data-percent');
-            const progress = circle.querySelector('.circle-progress');
-            progress.style.strokeDasharray = `${(percent / 100) * 377} 377`;
+            
+            // Animate skill bars when they come into view
+            const skillLevels = document.querySelectorAll('.skill-level');
+            const animateSkills = function() {
+                skillLevels.forEach(skill => {
+                    const position = skill.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (position < screenPosition) {
+                        skill.style.animationPlayState = 'running';
+                    }
+                });
+            };
+            
+            // Initial check and scroll event listener
+            animateSkills();
+            window.addEventListener('scroll', animateSkills);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Radio button navigation handler
+            document.querySelectorAll('.tabs input').forEach(input => {
+                input.addEventListener('change', function() {
+                    const target = this.getAttribute('onclick').match(/'(.*?)'/)[1];
+                    window.location.href = target;
+                });
+            });
+            
+            // Project hover effect enhancement
+            document.querySelectorAll('.project').forEach(project => {
+                project.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.querySelector('i').style.color = 'var(--cyber-blue)';
+                });
+                
+                project.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.querySelector('i').style.color = 'var(--text-color)';
+                });
+            });
+            
+            // Highlight active section in navbar based on scroll position
+            const sections = document.querySelectorAll('div[id]');
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                document.querySelectorAll('.tabs input').forEach(input => {
+                    const targetSection = input.getAttribute('onclick').match(/'#(.*?)'/)[1];
+                    
+                    if (targetSection === current) {
+                        input.checked = true;
+                    }
+                });
+            });
+            
+            // Add typing animation to intro paragraph
+            const introParagraph = document.querySelector('.name-text p');
+            const originalText = introParagraph.textContent;
+            introParagraph.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < originalText.length) {
+                    introParagraph.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 20);
+                }
+            }
+            
+            // Start typing effect after a short delay
+            setTimeout(typeWriter, 500);
         });
     </script>
-</body>
+</body> 
 </html>
