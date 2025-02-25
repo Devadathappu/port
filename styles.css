@@ -626,9 +626,8 @@
             color: var(--cyber-blue);
         }
         
-        .contact-form input,
+     .contact-form input,
 .contact-form textarea {
-    width: 100%;
     background-color: var(--netflix-black);
     border: 1px solid var(--netflix-light-gray);
     border-radius: 4px;
