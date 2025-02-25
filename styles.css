@@ -628,7 +628,7 @@
         
         .contact-form input,
 .contact-form textarea {
-    width: 100%; /* This will make all inputs take full width of the container */
+    width: 250px;
     background-color: var(--netflix-black);
     border: 1px solid var(--netflix-light-gray);
     border-radius: 4px;
