@@ -628,7 +628,7 @@
         
         .contact-form input,
 .contact-form textarea {
-    width: 250px;
+    width: 100%;
     background-color: var(--netflix-black);
     border: 1px solid var(--netflix-light-gray);
     border-radius: 4px;
